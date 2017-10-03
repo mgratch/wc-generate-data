@@ -1,0 +1,26 @@
+{
+  "name": "mindsize/wc-generate-data",
+  "description": "Sometimes you need to generate WooCommerce data, Sometimes you don't. Generate data, then use neuralyzer to delete it.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0",
+  "require": {
+    "composer/installers": "^1.4",
+    "xrstf/composer-php52": "^1.0"
+  },
+  "autoload": {
+    "classmap": [
+      "includes"
+    ]
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ],
+    "post-update-cmd": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ],
+    "post-autoload-dump": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ]
+  }
+}
